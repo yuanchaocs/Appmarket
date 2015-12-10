@@ -11,25 +11,32 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
-
+        <!--app:layout_scrollFlags=scroll|snap 滚动猛开猛关-->
+        <!--app:layout_scrollFlags=scroll|enterAlways 滚动向下移动立即显示-->
+        <!--app:layout_scrollFlags=scroll|enterAlwaysCollapsed 滚动向下移动显示但Toolbar固定-->
+        <!--向上滚动时收缩,向下移动显示-->
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|enterAlways"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
             app:navigationIcon="@mipmap/img_main_login_icon"
             app:popupTheme="@style/AppTheme.PopupOverlay"
             app:subtitle="@string/toolbar_subtitle"
             app:theme="@style/AppTheme.AppBarOverlay"
             app:title="@string/toolbar_title" />
 
+        <!--向上滚动时收缩,向下移动显示但Toolbar固定-->
         <EditText
             android:id="@+id/et_search_keyword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_margin="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
             android:background="@mipmap/img_search_edit_normal"
             android:drawableLeft="@android:drawable/ic_menu_search"
             android:drawablePadding="10dp"
@@ -37,7 +44,7 @@
             android:hint="@string/edt_hide_search"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColorHint="@android:color/darker_gray"
-            app:layout_scrollFlags="scroll|enterAlways" />
+            app:layout_scrollFlags="scroll|enterAlwaysCollapsed|snap" />
 
         <!-- TabLayout-->
         <android.support.design.widget.TabLayout
