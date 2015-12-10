@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Appmarket</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="toolbar_title">翡翠应用市场</string>
+    <string name="toolbar_subtitle">SM-N9006</string>
+    <string name="edt_hide_search">点击进行软件搜索</string>
+</resources>
