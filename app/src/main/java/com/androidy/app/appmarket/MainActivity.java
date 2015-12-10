@@ -33,7 +33,7 @@ public class MainActivity extends BaseActivity
     }
 
     private void initNavigation() {
-        // 工具栏
+        // 工具栏Toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         // 动作条抽屉切换器,将抽屉与appicon动作条绑定交互
