@@ -20,13 +20,13 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:layout_scrollFlags="scroll|enterAlways"
             app:navigationIcon="@mipmap/img_main_login_icon"
             app:popupTheme="@style/AppTheme.PopupOverlay"
             app:subtitle="@string/toolbar_subtitle"
             app:theme="@style/AppTheme.AppBarOverlay"
-            app:title="@string/toolbar_title" />
-
+            app:title="@string/toolbar_title"
+            app:titleMarginStart="6dp" />
         <!--向上滚动时收缩,向下移动显示但Toolbar固定-->
         <EditText
             android:id="@+id/et_search_keyword"

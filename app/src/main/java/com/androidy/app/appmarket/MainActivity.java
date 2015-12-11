@@ -14,8 +14,6 @@ import com.androidy.app.lib.BaseActivity;
 
 public class MainActivity extends BaseActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
-
     @Override
     protected void preComponentData(Bundle extra) {
         // 当前没有数据需要获取
