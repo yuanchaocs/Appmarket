@@ -6,28 +6,29 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context=".MainActivity">
-
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
-        <!--app:layout_scrollFlags=scroll|snap 滚动猛开猛关-->
-        <!--app:layout_scrollFlags=scroll|enterAlways 滚动向下移动立即显示-->
-        <!--app:layout_scrollFlags=scroll|enterAlwaysCollapsed 滚动向下移动显示但Toolbar固定-->
-        <!--向上滚动时收缩,向下移动显示-->
+        <!--app:layout_scrollFlags=scroll 滚动, 没有设置该标志，这个View会被钉在屏幕的顶部-->
+        <!--app:layout_scrollFlags=scroll|snap 猛开猛关-->
+        <!--app:layout_scrollFlags=scroll|enterAlways 向下移动时将立即显示-->
+        <!--app:layout_scrollFlags=scroll|enterAlwaysCollapsed 这个View仅仅会以最小高度进入，当滑到顶部时被拉伸为整个的高度-->
+        <!--app:layout_scrollFlags=scroll|exitUntilCollapsed 在View被滑动到最小高度之前一直存在于屏幕-->
+        <!--Toolbar滚动 -->
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|enterAlways"
-            app:navigationIcon="@mipmap/img_main_login_icon"
+            android:background="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlwaysCollapsed"
             app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:navigationIcon="@mipmap/img_main_login_icon"
             app:subtitle="@string/toolbar_subtitle"
             app:theme="@style/AppTheme.AppBarOverlay"
             app:title="@string/toolbar_title"
             app:titleMarginStart="6dp" />
-        <!--向上滚动时收缩,向下移动显示但Toolbar固定-->
+        <!--EditText滚动,向下时立即显示-->
         <EditText
             android:id="@+id/et_search_keyword"
             android:layout_width="match_parent"
@@ -44,15 +45,15 @@
             android:hint="@string/edt_hide_search"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColorHint="@android:color/darker_gray"
-            app:layout_scrollFlags="scroll|enterAlwaysCollapsed|snap" />
-
-        <!-- TabLayout-->
+            app:layout_scrollFlags="scroll|enterAlways" />
+        <!--EditText滚动,向下时立即显示-->
         <android.support.design.widget.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fillViewport="false"
             app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
     </android.support.design.widget.AppBarLayout>
 
     <include layout="@layout/content_main" />
