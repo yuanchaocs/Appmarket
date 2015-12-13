@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!--CoordinatorLayout 用来组织它的子views之间协作
-        AppBar
-            CollapsingToolbarLayout
-                Toolbar
-        FloatingActionButton
-        NestedScrollView
--->
-
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -30,11 +22,11 @@
             android:layout_height="@dimen/appbar_detail_height"
             android:fitsSystemWindows="true"
             android:minHeight="?attr/actionBarSize"
-            app:title="翡翠云协作平台"
             app:collapsedTitleGravity="start|center_vertical"
             app:contentScrim="@color/colorAccent"
             app:expandedTitleGravity="start|bottom"
-            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed">
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:title="翡翠云协作平台">
 
             <ImageView
                 android:layout_width="match_parent"
